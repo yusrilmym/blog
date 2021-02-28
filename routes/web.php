@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 //     // echo $name;//for data pass in slug
 //     return view('welcome',['name'=>$name]);
 // });
-Route::get('/{name}', function ($name) { //name for passing data
-    // echo $name;//for data pass in slug
-    return view('welcome',['name'=>$name]);
+Route::get('/', function(){
+    // return view('welcome');
+    return redirect("about");//redirect
 });
 
 // Route::get('/about', function(){
