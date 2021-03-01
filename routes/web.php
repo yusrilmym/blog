@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Users;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,7 @@ Route::get('/', function(){
 
 Route::view("about", 'about');
 Route::view("xyz", 'contact');//xyz slug , contact is view
+
+// Route::get("path","controller file");
+// Route::get("users","Users@index");//not use
+Route::get("users/{user}",[Users::class,'index']);
